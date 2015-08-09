@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root "posts#index"
 
   get '/about', to:'pages#about'
-  get '/admin', to: 'pages#admin'
+  get '/admin', to: 'posts#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
