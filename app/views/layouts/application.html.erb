@@ -21,7 +21,12 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </head>
   <body style="background-color:#e4e4e4">
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container" style="background:white">
+      <div class="page-header">
+        <h1>AskPrateek<small>The Windows Explorer</small></h1>
+      </div>
+    </div>
+    <nav class="navbar navbar-inverse navbar" role="navigation">
       <div class="container" >
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -38,7 +43,7 @@
             <li><%= link_to "About", about_path %></li>
             <li><a href="#contact">Contact</a></li>
             <% if user_signed_in? %>
-              <li><%= link_to 'Admin', new_post_path %></li>
+              <li><a href="/admin">Admin</a></li>
               <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
             <% else %>
               <li><a id ="myBtn" href="#login">Login</a></li>
